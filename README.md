@@ -1,9 +1,9 @@
 ## Classifying Subreddit Posts Using APIs and NLP
 
-### Executive Summary
+### Summary
 In this project, I used [Pushshift's](https://github.com/pushshift/api) API to collect posts from two subreddits: [`/r/nosleep`](https://www.reddit.com/r/nosleep) and [`/r/creepypasta`](https://www.reddit.com/r/creepypasta). Using Natural Language Processing, I trained a few classifiers to determine where the post came from. After conducting a `GridSearch()` on different parameters for each classifier, I chose the model and parameters with the best test score. By running `CountVectorizer()` and `ExtraTreesClassifier()` through a `Pipeline()`, the model was able to predict the subreddit 77% of the time.
 
-#### Choosing Two Subreddits
+**Selecting Two Subreddits**  
 The subreddits I chose are both platforms where users can write and share horror stories. The main differences are in the number of users, where [`/r/nosleep`](https://www.reddit.com/r/nosleep) has 13.8m members and [`/r/creepypasta`](https://www.reddit.com/r/creepypasta) has 326k members, and the requirements for the stories users create and share. On [`/r/nosleep`](https://www.reddit.com/r/nosleep), users' stories are usually long and are required to have a believable
 plot written in the first-person. On [`/r/creepypasta`](https://www.reddit.com/r/creepypasta), stories are usually short, may contain a video or image, and meant to be virally shared. I chose these subreddits because of their similar content, yet distinguishable styles. Although the posts from both subreddits contain many similar words, the model trains on 10,000 observations from each subreddit to then classify the post.
 
