@@ -1,4 +1,4 @@
-## Classifying Subreddit Posts Using APIs and NLP
+## Classifying Subreddit Posts Using NLP
 
 ### Summary
 In this project, I used [Pushshift's](https://github.com/pushshift/api) API to collect posts from two subreddits: [`/r/nosleep`](https://www.reddit.com/r/nosleep) and [`/r/creepypasta`](https://www.reddit.com/r/creepypasta). Using Natural Language Processing, I trained a few classifiers to determine where the post came from. After conducting a `GridSearch()` on different parameters for each classifier, I chose the model and parameters with the best test score. By running `CountVectorizer()` and `ExtraTreesClassifier()` through a `Pipeline()`, the model was able to predict the subreddit 77% of the time.
